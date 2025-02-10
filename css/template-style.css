@@ -89,7 +89,8 @@ nav ul li ul li {
 }
 #third-block ul li{
   float:left;
-  display:block;
+  display:flex;
+	flex-direction: column;
   padding: 0 0px 0 0px;
   }
   
