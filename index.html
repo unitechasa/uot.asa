@@ -235,5 +235,43 @@
          });	
           
       </script> 
+
+      <!--Firebase configuration-->
+      <script>
+        
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YO.firebaseapp.com",
+            projectId: "unitechasaweb",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        const likeButton = document.getElementById('likeButton');
+        const likeCountDisplay = document.getElementById('likeCount');
+
+        // Fetch current like count
+        async function fetchLikes() {
+            const doc = await db.collection('likes').doc('myContent').get();
+            const data = doc.exists ? doc.data() : { count: 0 };
+            likeCountDisplay.textContent = data.count;
+        }
+
+        // Add a like
+        likeButton.addEventListener('click', async () => {
+            await db.collection('likes').doc('myContent').set({
+                count: firebase.firestore.FieldValue.increment(1)
+            }, { merge: true });
+            fetchLikes(); // Update the displayed like count
+        });
+
+        // Initial fetch
+        fetchLikes();
+      </script>
    </body>
 </html>
