@@ -1,7 +1,4 @@
-      
-        
-        const firebaseConfig = {
-        // Your web app's Firebase configuration
+// Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBFsT_7E2xrJKB7f211te5_Ai1FCLDuKf0",
     authDomain: "comment-asa.firebaseapp.com",
