@@ -242,38 +242,59 @@
       <script>
         
         const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YO.firebaseapp.com",
-            projectId: "unitechasaweb",
-            storageBucket: "YOUR_PROJECT_ID.appspot.com",
-            messagingSenderId: "YOUR_SENDER_ID",
-            appId: "YOUR_APP_ID"
-        };
+        // Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "comment-asa.firebaseapp.com",
+    projectId: "comment-asa",
+    storageBucket: "comment-asa.appspot.com",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID"
+};
 
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
-        const likeButton = document.getElementById('likeButton');
-        const likeCountDisplay = document.getElementById('likeCount');
+// Function to post a comment
+document.getElementById('commentForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const comment = document.getElementById('comment').value;
 
-        // Fetch current like count
-        async function fetchLikes() {
-            const doc = await db.collection('likes').doc('myContent').get();
-            const data = doc.exists ? doc.data() : { count: 0 };
-            likeCountDisplay.textContent = data.count;
-        }
+    db.collection("comments").add({
+        username: username,
+        comment: comment,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
+    .then(() => {
+        console.log("Comment successfully written!");
+        document.getElementById('commentForm').reset();
+        loadComments(); // Refresh comments after posting a new one
+    })
+    .catch((error) => {
+        console.error("Error writing comment: ", error);
+    });
+});
 
-        // Add a like
-        likeButton.addEventListener('click', async () => {
-            await db.collection('likes').doc('myContent').set({
-                count: firebase.firestore.FieldValue.increment(1)
-            }, { merge: true });
-            fetchLikes(); // Update the displayed like count
+// Function to load comments
+function loadComments() {
+    db.collection("comments").orderBy("timestamp", "desc").get().then((querySnapshot) => {
+        const commentsList = document.getElementById('commentsList');
+        commentsList.innerHTML = ""; // Clear the list before loading
+        
+        querySnapshot.forEach((doc) => {
+            const data = doc.data();
+            const commentElement = document.createElement('div');
+            commentElement.innerHTML = `<strong>${data.username}</strong>: ${data.comment}`;
+            commentsList.appendChild(commentElement);
         });
+    });
+}
 
-        // Initial fetch
-        fetchLikes();
+// Load comments on page load loadComments();
+
       </script>
    </body>
 </html>
