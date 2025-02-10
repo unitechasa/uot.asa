@@ -474,7 +474,7 @@ body.modal-active {
   } 
 }
 
-/*This section is for the share buttons*/
+/*This section is for the share buttons
 .share-button {
     display: inline-block;
     padding: 5px 10px;
@@ -517,7 +517,7 @@ button{
 button:hover {
     background-color: orange;
 }
-/*
+
 .house {
     height: 600px;
     width: 350px;
