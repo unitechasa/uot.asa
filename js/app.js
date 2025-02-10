@@ -8,7 +8,7 @@ const firebaseConfig = {
     authDomain: "comment-asa.firebaseapp.com",
     projectId: "comment-asa",
     storageBucket: "comment-asa.firebasestorage.app",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    messagingSenderId: "212921434485",
     appId: "1:212921434485:web:0f3ca4e31eac488c42933c",
     measurementId: "G-RTWWLFJW5W"
 };
