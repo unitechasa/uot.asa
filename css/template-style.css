@@ -87,11 +87,9 @@ nav ul li ul li {
 #third-block {
 	background: #fff;
 }
-#third-block ul li{
+#third-block {
   float:left;
-  display:flex;
-	flex-direction: column;
-  padding: 0 0px 0 0px;
+  padding: 0 20px 0 20px;
   }
   
 #fourth-block {
