@@ -55,7 +55,7 @@ form.customform input, form.customform select, form.customform textarea, form.cu
 } 
 form.customform input, form.customform select {height: 2.7rem;}
 form.customform input, form.customform textarea, form.customform select { 
- background: none repeat scroll 0 0 maroon;
+ background: none repeat scroll 0 0 #fff;
  transition: background 0.20s linear 0s;
  -o-transition: background 0.20s linear 0s;
  -ms-transition: background 0.20s linear 0s;
