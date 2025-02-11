@@ -64,7 +64,7 @@ form.customform input, form.customform textarea, form.customform select {
 }
 form.customform input:hover, form.customform textarea:hover, form.customform select:hover, form.customform input:focus, form.customform textarea:focus, form.customform select:focus {background: none repeat scroll 0 0 #fff;}
 form.customform input, form.customform textarea, form.customform select {
- background: none repeat scroll 0 0 orange;
+ background: none repeat scroll 0 0 #fff;
  border: 1px solid maroon;
  padding: 0.625rem;
  width: 100%;
