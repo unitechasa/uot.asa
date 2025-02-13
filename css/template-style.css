@@ -301,7 +301,7 @@ form.customform input, form.customform select, form.customform textarea {
 .whatsapp-share-button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: maroon;
+            background-color: orange;
             color: #fff;
             border-radius: 5px;
             text-decoration: none;
