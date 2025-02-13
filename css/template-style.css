@@ -299,8 +299,9 @@ form.customform input, form.customform select, form.customform textarea {
   }
 
     .linkedin-share-button {
-        background-color: blue;
-        color: white;
+        background-color: maroon
+        color: #fff;
+	right:10%;
         border: none;
         padding: 10px 20px;
         border-radius: 5px;
