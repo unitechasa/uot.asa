@@ -298,12 +298,15 @@ form.customform input, form.customform select, form.customform textarea {
     float: none;
   }
 
-.whatsapp-share-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: orange;
-            color: #fff;
-            border-radius: 5px;
-            text-decoration: none;
-}
+    .linkedin-share-button {
+        background-color: #0077b5;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
 
