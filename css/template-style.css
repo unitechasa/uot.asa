@@ -312,4 +312,17 @@ form.customform input, form.customform select, form.customform textarea {
     float: none;
   }
 
+.share-buttons {
+            display: none;
+            position: absolute;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .share-buttons a {
+            display: block;
+            margin: 5px 0;
+	}
+
 
