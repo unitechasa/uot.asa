@@ -88,6 +88,10 @@ nav ul li ul li {
 #second-block {
 	background: maroon;
 }
+#second-block h2{
+	color: #fff;
+}
+
 #third-block {
 	background: #fff;
 }
