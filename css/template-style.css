@@ -87,6 +87,7 @@ nav ul li ul li {
 }
 #second-block {
 	background: maroon;
+	padding-bottom: 20px;
 }
 #second-block h2{
 	color: #fff;
