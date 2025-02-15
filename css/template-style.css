@@ -104,7 +104,7 @@ nav ul li ul li {
 #third-block {
   float:left;
   display: inline;
-  padding: 0 0px 0 0px;
+  padding: 10 10px 10 10px;
   }
   
 #fourth-block {
@@ -312,16 +312,4 @@ form.customform input, form.customform select, form.customform textarea {
     float: none;
   }
 
-    .linkedin-share-button {
-        background-color: maroon
-        color: #fff;
-	right:10%;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-    }
 
