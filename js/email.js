@@ -11,7 +11,7 @@ submit.onclick = ()=>{
   message: msg.value
 };
 //emailjs.send(' your service_key','your template id', parameters)
-emailjs.send('service_mgnxqwn', 'Unitech ASA', templateParams)
+emailjs.send('service_mgnxqwn', '_ejs-test-mail-service_', templateParams)
 
   .then(function (response) {
     console.log('SUCCESS!', response.status, response.text);
