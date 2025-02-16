@@ -349,10 +349,16 @@ form.customform input, form.customform select, form.customform textarea {
 #submit{
     text-align:center;
     padding:5px;
-    background:#000;
+    background:maroon;
     color:#fff;
     
 }
+
+	#submit:hover{
+    background: orange;
+    
+	}
+	
 
 
         
